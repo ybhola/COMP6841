@@ -1,0 +1,7 @@
+Security Check Results:
+HTTPS: Vulnerable
+Password Policy: Vulnerable
+Account Lockout: Secure
+Insecure Password Storage: Vulnerable
+Secure Credential Recovery: Vulnerable
+Password: password - Reason: Password must contain upper and lower case letters, numbers, and special characters.
